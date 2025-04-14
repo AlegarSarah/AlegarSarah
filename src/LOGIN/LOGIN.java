@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -161,7 +162,8 @@ public class LOGIN extends javax.swing.JFrame {
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
    import javax.swing.*;
-import java.awt.event.ActionEvent
+import java.awt.event.ActionListener; // Added import
+import java.awt.event.ActionEvent;
 
 public class LoginPage {
     public static void main(String[] args) {
@@ -200,7 +202,9 @@ public class LoginPage {
 
         // Adding components to frame (example layout)
         frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
+        frame.add(new JLabel("Username:"));
         frame.add(txtUsername);
+        frame.add(new JLabel("Password:"));
         frame.add(txtPassword);
         frame.add(btnLogin);
         frame.setSize(300, 200);
@@ -240,11 +244,14 @@ public class LoginPage {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+           
                 new LOGIN().setVisible(true);
-            }
-        });
+            
+        
+    
+        };
     }
+            
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Exit;
